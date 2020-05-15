@@ -4,11 +4,11 @@ using System.Text;
 
 namespace polymorphism
 {
-        class Canon : PrinterWindows
+    public class Canon : IPrinterWindows
+    {
+        public void Convert(PrinterWindows printer)
         {
-            public override void Show()
-            {
-                Console.WriteLine("Canon display dimension : 9.5*12");
-            }
+            Console.WriteLine("Canon display dimension : {0}", printer.Canon);
         }
+    }
 }
